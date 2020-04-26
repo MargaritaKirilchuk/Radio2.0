@@ -19,18 +19,15 @@ public class Radio {
     private int minStation = 0;
     private int currentStation;
 
-
-
-    public void setCurrentStation() {
-        if (currentStation > maxStation) {
+    public void setCurrentStation(int inputStation) {
+        if (inputStation > maxStation) {
             return;
         }
-        if (currentStation < minStation) {
+        if (inputStation < minStation) {
             return;
         }
-        currentStation = currentStation;
+        currentStation = inputStation;
     }
-
 
     public void nextStation() {
         if ((currentStation + 1) >= maxStation) {
